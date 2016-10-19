@@ -72,6 +72,7 @@ a {
     padding: 1rem 1rem; } }
 
 .project-name {
+  letter-spacing: 1em;
   margin-top: 0;
   margin-bottom: 0.1rem; }
 
