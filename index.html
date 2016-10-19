@@ -9,12 +9,13 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link id="customtheme" rel="stylesheet" href="stylesheets/074.css" type="text/css" media="screen">
+    <link id="customtheme" rel="stylesheet" href="stylesheets/boris.css" type="text/css" media="screen">
     <script type="text/javascript">
         var rCurrentTheme = 0;
-        var rStyleSheets = [
-         {nr: 0, href: "stylesheets/074.css"},
-         {nr: 1, href: "stylesheets/057.css"},
+        var rStyleSheets  = [
+         {nr: 0, className: "",       href: "stylesheets/boris.css"},
+         {nr: 1, className: "rotate", href: "stylesheets/057.css"},
+         {nr: 2, className: "",       href: "stylesheets/074.css"},
         ];
 
         function cycleTheme(){
@@ -22,19 +23,17 @@
             if (rCurrentTheme >= rStyleSheets.length){
                 rCurrentTheme = 0;
             }
-            i.className= rCurrentTheme ? "rotate" : "";
+            i.className             = rStyleSheets[rCurrentTheme].className;
             window.customtheme.href = rStyleSheets[rCurrentTheme].href;
         }
     </script>
   </head>
   <body>
     <section class="page-header" onclick="cycleTheme()">
-      <h1 class="project-name">Boris&#39; Blues</h1>
-      <!-- <h2 class="project-tagline"></h2> -->
+      <h1 class="project-name">Boris Blues</h1>
     </section>
 
     <section class="main-content" style="text-align:center;">
-
       <img id="i" src="boris-blues.gif">
       <button type="button" name="button" class="btn" onclick="cycleTheme()">Align Styles</button>
 
@@ -42,7 +41,5 @@
       </footer>
 
     </section>
-
-
   </body>
 </html>
