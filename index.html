@@ -3,20 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <title>Boris&#39; Blues by BlueWebBoris</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link id="customtheme" rel="stylesheet" href="stylesheets/boris.css" type="text/css" media="screen">
+    <script type="text/javascript">
+        var rCurrentTheme = 0;
+        var rStyleSheets  = [
+         {nr: 0, className: "",       href: "stylesheets/boris.css"},
+         {nr: 1, className: "rotate", href: "stylesheets/057.css"},
+         {nr: 2, className: "",       href: "stylesheets/074.css"},
+        ];
+
+        function cycleTheme(){
+            rCurrentTheme++;
+            if (rCurrentTheme >= rStyleSheets.length){
+                rCurrentTheme = 0;
+            }
+            i.className             = rStyleSheets[rCurrentTheme].className;
+            window.customtheme.href = rStyleSheets[rCurrentTheme].href;
+        }
+    </script>
   </head>
   <body>
-    <section class="page-header">
+    <section class="page-header" onclick="cycleTheme()">
       <h1 class="project-name">Boris Blues</h1>
     </section>
 
-    <section class="main-content" style="text-align:center">
-      <img src="boris-blues.gif">
-    </section>
+    <section class="main-content" style="text-align:center;">
+      <img id="i" src="boris-blues.gif">
+      <button type="button" name="button" class="btn" onclick="cycleTheme()">Align Styles</button>
 
+      <footer class="site-footer">
+      </footer>
+
+    </section>
   </body>
 </html>
